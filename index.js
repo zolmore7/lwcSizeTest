@@ -3,7 +3,8 @@ const app = express()
 var port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send({"data" : "Hello World!"})
+  res.setHeader('Content-Type', 'application/json');
+  res.end(JSON.stringify({ a: "Hello World" }));
 })
 
 app.listen(port, () => {
