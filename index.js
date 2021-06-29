@@ -1,7 +1,7 @@
 const express = require('express');
 const fetch = require('node-fetch');
-const theTiff = doFetch();
-
+var theTiff = doFetch();
+console.log((theTiff).substring(0,100));
 const app = express();
 var port = process.env.PORT || 3000;
 var returnVar = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
@@ -24,9 +24,12 @@ app.get('/', (req, res) => {
   res.end(theTiff);
 })
 
-async function doFetch() {
-  const data = await fetch('https://file-examples-com.github.io/uploads/2017/10/file_example_TIFF_10MB.tiff');
-  return data;
+function doFetch() {
+  fetch('https://file-examples-com.github.io/uploads/2017/10/file_example_TIFF_10MB.tiff')
+  .then(response => response.text())
+  .then(data => {
+    theTiff = data;
+  })
 }
 
 app.listen(port, () => {
