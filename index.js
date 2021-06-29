@@ -13,12 +13,12 @@ returnVar += 'DannyLeblanc12345';
 app.get('/', (req, res) => {
   let dataReturn = '';
   console.log('Before fetch');
-  doFetch();
+  //doFetch();
   console.log('After fetch');
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Access-Control-Allow-Origin', '*');
   //res.end(returnVar);
-  res.end(dataReturn);
+  res.end(doFetch);
 })
 
 async function doFetch() {
