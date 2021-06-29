@@ -29,7 +29,8 @@ function doFetch() {
   fetch('https://file-examples-com.github.io/uploads/2017/10/file_example_TIFF_10MB.tiff')
   .then(response => response.text())
   .then(data => {
-    theTiff = data;
+    //theTiff = data;
+    theTiff = Buffer.from(data).toString('base64');
   })
 }
 
