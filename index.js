@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   let dataReturn = '';
   console.log('Before fetch');
   fetch('https://file-examples-com.github.io/uploads/2017/10/file_example_TIFF_10MB.tiff')
-  .then(res => res.text)
+  .then(res => res.text())
   .then(data => {
     dataReturn = data;
     console.log(data);
