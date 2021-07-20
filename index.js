@@ -1,11 +1,11 @@
 const express = require('express');
 const fetch = require('node-fetch');
 var theTiff = doFetch();
-var question1 = {qid: '1', quesition: 'Heroku Question 1'};
-var question2 = {qid: '2', quesition: 'Heroku Question 2'};
-var question3 = {qid: '3', quesition: 'Heroku Question 3'};
-var question4 = {qid: '4', quesition: 'Heroku Question 4'};
-var question5 = {qid: '5', quesition: 'Heroku Question 5'};
+var question1 = {qid: '1', question: 'Heroku Question 1'};
+var question2 = {qid: '2', question: 'Heroku Question 2'};
+var question3 = {qid: '3', question: 'Heroku Question 3'};
+var question4 = {qid: '4', question: 'Heroku Question 4'};
+var question5 = {qid: '5', question: 'Heroku Question 5'};
 
 var jsonReturn = [];
 jsonReturn.push(question1);
@@ -13,7 +13,7 @@ jsonReturn.push(question2);
 jsonReturn.push(question3);
 jsonReturn.push(question4);
 jsonReturn.push(question5);
-
+console.log(JSON.stringify(jsonReturn));
 
 const app = express();
 var port = process.env.PORT || 3000;
