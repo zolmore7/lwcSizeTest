@@ -8,11 +8,11 @@ var question4 = {qid: '4', quesition: 'Heroku Question 4'};
 var question5 = {qid: '5', quesition: 'Heroku Question 5'};
 
 var jsonReturn = [];
-jsonReturn.add(question1);
-jsonReturn.add(question2);
-jsonReturn.add(question3);
-jsonReturn.add(question4);
-jsonReturn.add(question5);
+jsonReturn.push(question1);
+jsonReturn.push(question2);
+jsonReturn.push(question3);
+jsonReturn.push(question4);
+jsonReturn.push(question5);
 
 
 const app = express();
