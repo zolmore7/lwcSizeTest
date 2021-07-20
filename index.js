@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 app.get('/quizData', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.end(JSON.stringify(jsonReturn));
+  res.end(jsonReturn);
 })
 
 function doFetch() {
