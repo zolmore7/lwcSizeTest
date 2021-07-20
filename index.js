@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   //doFetch();
   //console.log('After fetch');
   res.setHeader('Content-Type', 'application/json');
-  //res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   //res.end(returnVar);
   res.end(theTiff);
 })
