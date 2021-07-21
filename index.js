@@ -2,8 +2,8 @@ const express = require('express');
 const fetch = require('node-fetch');
 var theTiff = doFetch();
 var question1 = {qid: 1, question: 'Heroku Question 1', type: 'textbox'};
-var question2 = {qid: 2, question: 'Heroku Question 2', type: 'radio'};
-var question3 = {qid: 3, question: 'Heroku Question 3', type: 'list'};
+var question2 = {qid: 2, question: 'Heroku Question 2', type: 'radio', options: [{label: 'Option 1', value: 'Opt1'}, {label: 'Option 2', value: 'Opt2'}]};
+var question3 = {qid: 3, question: 'Heroku Question 3', type: 'list', options: [{label: 'DropDown 1', value: 'DD1'}, {label: 'DropDown 2', value: 'DD2'}]};
 var question4 = {qid: 4, question: 'Heroku Question 4', type: 'textbox'};
 var question5 = {qid: 5, question: 'Heroku Question 5', type: 'textbox'};
 
